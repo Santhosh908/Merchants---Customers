@@ -1,0 +1,42 @@
+.showtext{
+    text-align: center;
+    padding: 1%;
+    font-family:sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+}
+h1{
+    animation: color-change 3s infinite;
+}
+@keyframes color-change {
+    0% { color: red; }
+    25%{color:blueviolet}
+    50% { color: blue; }
+    75%{color: brown;}
+    100% { color: red; }
+  }
+.products{
+    display: flex;
+    padding: 5%;
+    margin-top: 3%;
+    margin-left: 20%;
+}
+.addproduct{
+    border-style: groove;
+    border-color: black;
+    box-shadow: 1px 3px;
+    border-radius: 5px;
+    padding: 5%;
+}
+.sellproduct{
+    margin-left: 10%;
+    border-style: groove;
+    box-shadow: 1px 3px;
+    border-radius: 5px;
+    border-color: black;
+    padding: 5%;
+}
+button:active{
+    background-color: white;
+    color: blue;
+}
