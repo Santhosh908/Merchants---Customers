@@ -21,6 +21,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import { AuthGuard } from './auth.guard';
 import {  HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
+import { ProductmasterComponent } from './productmaster/productmaster.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { SignupComponent } from './signup/signup.component';
     MenuComponent,
     HomefooterComponent,
     ProfileComponent,
-    SignupComponent
+    SignupComponent,
+    ProductmasterComponent
     ],
   imports: [
     BrowserModule,
