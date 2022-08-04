@@ -1,0 +1,18 @@
+<script type="text/javascript" src="/back-end/index.js"></script>
+
+<app-header></app-header>
+
+<div class="content">
+<form  #f="ngForm" validate>
+    <label>User name:</label>
+    <input class="form-control" type="text"  name="forminput" ngModel required #first="ngModel">
+    <div class="error" *ngIf="!first.valid">
+      <strong>*enter your name</strong></div>
+    <br><br>
+      <label>Password:</label>
+    <input type="password" name="formpass" ngModel required #pass="ngModel">
+    <div class="error" *ngIf="!pass.valid"><strong>*enter your password</strong></div>
+    <div class="butclass"><button  (click)="submit(first.value,pass.value)">Login</button></div>
+    <div class="signup">don't have a account?<button (click)="signin()">click here</button></div>
+</form>
+</div>

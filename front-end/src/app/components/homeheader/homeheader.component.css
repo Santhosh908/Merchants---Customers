@@ -1,0 +1,71 @@
+.logo{
+    width: 10%;
+    margin-left: 10%;
+}
+.homeheader{
+    margin-top: 0%;
+    display: flex;
+    background-color: rgb(234, 234, 226);
+
+}
+.name{
+    margin-left: 10%;
+    padding-top: 2%;
+    font-size:x-large;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.menu{
+    margin-left: 30%;
+    margin-top: 1.5%;
+}
+.menu>mat-icon{
+    cursor: pointer;
+}
+.navitems{
+    margin-left: 10%;
+    display: flex;
+    margin-top: 2%;
+    width: auto;
+}
+.profile{
+    display: flex;
+    cursor: pointer;
+    margin-right: 10%;
+}
+.profile>span{
+    margin-top: 6%;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.logout>span{
+    margin-top: 6%;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.logout{
+    margin-left: 40%;
+    display: flex;
+    cursor: pointer;
+}
+.home{
+    margin-left: 60%;
+    display: flex;
+    cursor: pointer;
+    margin-right: 50%;
+}
+.home>span{
+     margin-top: 6%;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.home:hover{
+    color: rgb(67, 66, 66);
+}
+.profile:hover{
+    color: rgb(67, 66, 66);
+}
+.logout:hover{
+    color: rgb(67, 66, 66);
+}

@@ -1,0 +1,23 @@
+.footer{
+    align-items: center;
+    width: 100%;
+    background-color: rgb(234,234,226);
+}
+.icon{
+    padding: 1%;
+    width: 50px;
+    height: 50px;
+}
+.footermain{
+    position : fixed;
+    margin-top: 38%;
+    margin-bottom: 0%;
+    display: flex;
+    width: 100%;
+}
+.ccfooter{
+    padding-top: 1%;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(234,234,226);
+}

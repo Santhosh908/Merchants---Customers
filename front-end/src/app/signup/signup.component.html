@@ -1,0 +1,12 @@
+<h1 class="header">Create your account</h1>
+<div class="formclass">
+<form #signupform="ngForm">
+<label>Enter your name</label><br><br>
+<input name="username" type="text" ngModel required #username="ngModel"><br><br>
+<label>Enter your password</label><br><br>
+<input name="password" type="password" ngModel required #pass="ngModel"><br><br>
+<label>Confirm your password</label><br><br>
+<input name="password2" type="password" ngModel required #confirmpass="ngModel"><br><br>
+<button (click)="submit(signupform)">Submit</button>
+</form>
+</div>
