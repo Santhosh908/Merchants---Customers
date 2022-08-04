@@ -16,6 +16,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import {  HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 import { ProductmasterComponent } from './productmaster/productmaster.component';
+import {MatDialogModule,MatDialogContent, MatDialogClose} from '@angular/material/dialog';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,8 @@ import { ProductmasterComponent } from './productmaster/productmaster.component'
     MatIconModule,
     MatDividerModule,
     DragDropModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
   ],
   providers: [AppComponent],
   bootstrap: [AppComponent]
