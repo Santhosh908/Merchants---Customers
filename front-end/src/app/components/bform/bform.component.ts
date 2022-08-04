@@ -2,6 +2,7 @@ import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder, NgForm } from '@angular/forms';
 import { Router,RouterModule } from '@angular/router';
 import { CanActivate } from '@angular/router';
+import { HeaderComponent } from '../header/header.component';
 import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-bform',
