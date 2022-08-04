@@ -17,6 +17,7 @@ import {  HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 import { ProductmasterComponent } from './productmaster/productmaster.component';
 import {MatDialogModule,MatDialogContent, MatDialogClose} from '@angular/material/dialog';
+import { DialogproductComponent } from './dialogproduct/dialogproduct.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {MatDialogModule,MatDialogContent, MatDialogClose} from '@angular/materia
     HomeheaderComponent,
     HomefooterComponent,
     SignupComponent,
-    ProductmasterComponent
+    ProductmasterComponent,
+    DialogproductComponent,
     ],
   imports: [
     BrowserModule,
