@@ -1,7 +1,7 @@
 const mqsql=require('mysql');
  var connection=mqsql.createConnection({
     host:"localhost",
-    database:"posts",
+    database:"mercust",
     user:"root",
     password:"santhosh@2003"
  });

@@ -43,7 +43,18 @@ app.post('/enroll', function(req, res) {
     }
   });
 })
-
+app.post("/addproducts",function(req,res){
+  var pid=req.body.b
+  var pname=req.body.a
+  var query=`INSERT INTO masterproduct VALUES("${pid}","${pname}")`;
+  database.query(query,function(err, rows){
+    if(err) {
+      throw err;
+    } else {
+      res.send(rows);
+    }
+  });
+})
 app.listen(PORT, function(){
   console.log("Server running on localhost:" + PORT);
 });

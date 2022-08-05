@@ -1,8 +1,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<form name="form" #form="ngForm">
+<form name="forma" #form="ngForm">
 <label class="form-label" >Enter product name</label><br>
-<input type="text" class="form-control" ngModel required #pname="ngModel" ng-required="true"><br><br>
+<input type="text" class="form-control" [ngModelOptions]="{standalone: true}" ngModel #pname="ngModel" ng-required="true"><br><br>
 <label class="form-label">Enter product id</label><br>
-<input type="text" class="form-control" ngModel required #pname="ngModel" ng-required="true"><br><br>
-<button type="submit" ng-disabled="#form.$invalid" (click)="submit()">Submit</button>
+<input type="text" class="form-control" [ngModelOptions]="{standalone: true}" ngModel #pid="ngModel" ng-required="true"><br><br>
+<button type="submit" ng-disabled="#form.$invalid" (click)="submit(pname,pid)">Submit</button>
 </form>
