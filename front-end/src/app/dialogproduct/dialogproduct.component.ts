@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Dialog } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-dialogproduct',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DialogproductComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private dialog:Dialog) { }
+  submit(){
+    this.dialog.closeAll()
+  }
   ngOnInit(): void {
   }
 
