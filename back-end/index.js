@@ -55,6 +55,16 @@ app.post("/addproducts",function(req,res){
     }
   });
 })
+app.get("/showtables",function(req,res){
+  var query="SELECT * FROM masterproduct"
+  database.query(query,function(err,rows){
+      if(err)
+      throw err
+      else
+      res.send(rows)
+      // console.log(rows.length)
+  })
+})
 app.listen(PORT, function(){
   console.log("Server running on localhost:" + PORT);
 });

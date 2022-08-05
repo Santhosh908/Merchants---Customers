@@ -18,6 +18,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ProductmasterComponent } from './productmaster/productmaster.component';
 import {MatDialogModule,MatDialogContent, MatDialogClose} from '@angular/material/dialog';
 import { DialogproductComponent } from './dialogproduct/dialogproduct.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { DialogproductComponent } from './dialogproduct/dialogproduct.component'
     DragDropModule,
     HttpClientModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule
   ],
   providers: [AppComponent],
   bootstrap: [AppComponent]
