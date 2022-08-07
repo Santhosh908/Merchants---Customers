@@ -1,33 +1,64 @@
-<div class="addclass">
+ <div class="addclass">
 <button class="btn" (click)="popup()">+ add</button>
 </div>
 <div>
     <button (click)="showtable()">test</button>
 </div>
-<h1>{{a[0][0]}}</h1>
+<!-- 
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8"> 
+
+
+
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="weight">
+    <th mat-header-cell *matHeaderCellDef> Weight </th>
+    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="symbol">
+    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+-->
+
+<!-- <tr>
+  <td *ngFor="let i of a">{{i.productid}}</td>
+  <td *ngFor="let i of a">{{i.productname}}</td>
+</tr>  -->
+
+
 <table mat-table [dataSource]="a" class="mat-elevation-z8">
+  <ng-container matColumnDef="productid">
+    <th mat-header-cell *matHeaderCellDef> productid </th>
+    <td mat-cell *matCellDef="let user"> {{user.pid}} </td>
+  </ng-container>
+  <ng-container matColumnDef="productname">
+    <th mat-header-cell *matHeaderCellDef> productname </th>
+    <td mat-cell *matCellDef="let user"> {{user.pname}} </td>
+  </ng-container>
+  <!-- <ng-container matColumnDef="pid">
+    <th mat-header-cell *matHeaderCellDef> Productid </th>
+    <td mat-cell *matCellDef="let element of a"> {{element.productid}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Productname </th>
+    <td mat-cell *matCellDef="let element of a"> {{element.productname}} </td>
+  </ng-container>-->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   
-    <!-- <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-    </ng-container> -->
-  
-    <tr mat-header-row *matHeaderRowDef="a"></tr>
-    <tr mat-row *matRowDef="let row; columns: a;"></tr>
-  </table>
-  
+</table>
