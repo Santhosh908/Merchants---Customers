@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './dialogproduct.component.html',
   styleUrls: ['./dialogproduct.component.css']
 })
-export class DialogproductComponent implements OnInit {
+export class DialogproductComponent  {
 
   constructor(private dialog:Dialog,private http:HttpClient) { }
   submit(data1:any,data2:any){
@@ -19,6 +19,7 @@ export class DialogproductComponent implements OnInit {
         console.log(res)
    }
   )
+  window.location.reload()
   }
   ngOnInit(): void {
   }
