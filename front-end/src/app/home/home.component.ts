@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { InsertproductComponent } from '../insertproduct/insertproduct.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
     this.route.navigate(['addproduct'])
   }
   sellp(){
-
+    this.route.navigate(['sellproduct'])
   }
   ngOnInit(): void {
   }

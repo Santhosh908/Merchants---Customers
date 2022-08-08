@@ -5,10 +5,12 @@ import { AuthGuard } from './auth.guard';
 import { BformComponent } from './components/bform/bform.component';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
+import { InsertproductComponent } from './insertproduct/insertproduct.component';
 const routes: Routes  =[  
    { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component:BformComponent},
   { path: 'home', component:HomeComponent,canActivate:[AuthGuard] },
+  {path:'sellproduct',component:InsertproductComponent},
   {path:'signup',component:SignupComponent},
   {path:'addproduct',component:ProductmasterComponent}
 ];
