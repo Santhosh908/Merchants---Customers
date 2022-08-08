@@ -20,6 +20,7 @@ import {MatDialogModule,MatDialogContent, MatDialogClose} from '@angular/materia
 import { DialogproductComponent } from './dialogproduct/dialogproduct.component';
 import {MatTableModule} from '@angular/material/table';
 import { InsertproductComponent } from './insertproduct/insertproduct.component';
+import { SelldialogueComponent } from './components/selldialogue/selldialogue.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { InsertproductComponent } from './insertproduct/insertproduct.component'
     ProductmasterComponent,
     DialogproductComponent,
     InsertproductComponent,
+    SelldialogueComponent,
     ],
   imports: [
     BrowserModule,
