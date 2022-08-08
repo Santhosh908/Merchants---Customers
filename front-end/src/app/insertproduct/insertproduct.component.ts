@@ -1,4 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { ProductmasterComponent } from '../productmaster/productmaster.component';
 
 @Component({
   selector: 'app-insertproduct',
@@ -7,8 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InsertproductComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private router:Router) { }
+  nav(){
+    this.router.navigate(['addproduct'])
+  }
   ngOnInit(): void {
   }
 

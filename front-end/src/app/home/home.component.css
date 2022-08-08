@@ -19,31 +19,25 @@ h1{
     display: flex;
     padding: 5%;
     margin-top: 3%;
-    margin-left: 10%;
+    margin-left: 20%;
 }
 .addproduct{
-    width: 40%;
+    width: 30%;
     border-style: groove;
     border-color: black;
     box-shadow: 1px 3px;
     border-radius: 5px;
-    padding-top: 5%;
-    padding-left: 5%;
-    padding-right: 4%;
-    padding-bottom: 2%;
+    padding: 5%;
 }
 .sellproduct{
-    width: 40%;
+    width: 30%;
     margin-left: 10%;
     border-style: groove;
     box-shadow: 1px 3px;
     border-radius: 5px;
     border-color: black;
-    border-radius: 5px;
-    padding-top: 5%;
-    padding-left: 5%;
-    padding-right: 4%;
-    padding-bottom: 2%;}
+    padding: 5%;
+}
 button:active{
     background-color: white;
     color: blue;
