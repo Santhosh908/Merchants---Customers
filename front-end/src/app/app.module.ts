@@ -19,6 +19,7 @@ import { ProductmasterComponent } from './productmaster/productmaster.component'
 import {MatDialogModule,MatDialogContent, MatDialogClose} from '@angular/material/dialog';
 import { DialogproductComponent } from './dialogproduct/dialogproduct.component';
 import {MatTableModule} from '@angular/material/table';
+import { InsertproductComponent } from './insertproduct/insertproduct.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {MatTableModule} from '@angular/material/table';
     SignupComponent,
     ProductmasterComponent,
     DialogproductComponent,
+    InsertproductComponent,
     ],
   imports: [
     BrowserModule,
