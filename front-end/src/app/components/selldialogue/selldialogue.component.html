@@ -1,1 +1,6 @@
-<p>selldialogue works!</p>
+<form #f="ngForm">
+    <label>Enter the product id:</label><br>
+    <input name="pid" type="text" ngModel required #pid="ngModel"><br>
+    <label>Enter the product name:</label><br>
+    <input type="text" (click)="check(pid.value)" value="{{a.productname}}"><br>
+</form>

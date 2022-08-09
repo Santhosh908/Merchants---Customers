@@ -65,6 +65,18 @@ app.get("/showtables",function(req,res){
       // console.log(rows.length)
   })
 })
+app.post("/check",function(req,res){
+  var a=req.body.pid
+  var query=`SELECT productname from mercust.masterproduct WHERE productid=${a}`
+  database.query(query,function(err,data){
+    if(err){
+      res.send("Not Found")
+    }
+    else{
+      res.send(data[0])
+    }
+  })
+})
 app.listen(PORT, function(){
   console.log("Server running on localhost:" + PORT);
 });
