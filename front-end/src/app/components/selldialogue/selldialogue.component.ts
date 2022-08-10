@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, LOCALE_ID, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
 
 @Component({
   selector: 'app-selldialogue',

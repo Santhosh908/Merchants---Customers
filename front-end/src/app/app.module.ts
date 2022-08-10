@@ -21,6 +21,7 @@ import { DialogproductComponent } from './dialogproduct/dialogproduct.component'
 import {MatTableModule} from '@angular/material/table';
 import { InsertproductComponent } from './insertproduct/insertproduct.component';
 import { SelldialogueComponent } from './components/selldialogue/selldialogue.component';
+import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { SelldialogueComponent } from './components/selldialogue/selldialogue.co
     HttpClientModule,
     MatDialogModule,
     ReactiveFormsModule,
-    MatTableModule
+    MatTableModule,
+    DropDownListModule
   ],
   providers: [AppComponent],
   bootstrap: [AppComponent]
