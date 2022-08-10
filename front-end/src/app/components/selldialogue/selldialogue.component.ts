@@ -25,16 +25,19 @@ export class SelldialogueComponent {
     })
   }
   elementdata:any=[]
+  selectedName:String=""
+  name:String=""
   a:any={productname:"productname"}
-  sell(pid:any,kg:any){
+  sell(pid:any,pname:any,kg:any){
     var pid=pid.value
     var kg=kg.value
-    var pname=this.a
-    this.http.post("http://localhost:3000/sellproduct",{pid,pname,kg}).subscribe((res)=>{
-      window.alert("Added")
-    })
+    console.log(pid,pname.value,kg)
+    // this.http.post("http://localhost:3000/sellproduct",{pid,pname,kg}).subscribe((res)=>{
+    //   window.alert("Added")
+    // })
   }
 check(pname:any){
+  console.log(pname)
   switch(pname){
     case 1:{
       console.log(1)
@@ -44,11 +47,15 @@ check(pname:any){
       console.log(2)
 
   }
-  console.log("came")
-  console.log(pname)
+}
+  onSelectName(obj:any): void {
+    this.selectedName = obj.name;        
+ 
+    this.name = obj.name;                
+    console.log(obj+"test");                 
+   }
   // this.http.post("http://localhost:3000/check",{pname}).subscribe((res)=>{
   //   console.log(res)
   //   this.a=res
   // })
-}
 }

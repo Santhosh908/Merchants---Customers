@@ -21,8 +21,7 @@ export class BformComponent implements OnInit {
     }
     else{
     this.http.post<any>(this.url,{"name":name,"pass":pass}).subscribe((res)=>{
-      console.log(res.name==name)
-      if(res.name==name && res.password==pass){
+      if(res.name==name && res.passord==pass){
         console.log("done")
         this.router.navigate(['home']);
       }

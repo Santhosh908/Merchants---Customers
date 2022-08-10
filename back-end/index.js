@@ -14,7 +14,7 @@ var someVar = [];
 app.post('/singin',function(req,res){
   var name=req.body.name
   var pass=req.body.pass
-  var query=`SELECT * FROM user where name="${name}" and password="${pass}"`;
+  var query=`SELECT * FROM user where name="${name}" and passord="${pass}"`;
   database.query(query,function(err, rows){
     if(err) {
       throw err;
