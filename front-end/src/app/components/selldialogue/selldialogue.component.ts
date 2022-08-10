@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component} from '@angular/core';
-import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
+// import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
 
 @Component({
   selector: 'app-selldialogue',
@@ -8,10 +8,21 @@ import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
   styleUrls: ['./selldialogue.component.css']
 })
 export class SelldialogueComponent {
-
+  datasource:any=[]
   constructor(private http:HttpClient) { }
-
+  public datafeilds:Object={text:'name',value:'Id'}
+  public localData:Object[]=[
+    {
+      Id:1 , name:"Santhosh"
+    }
+  ]
   ngOnInit(): void {
+    this.http.get("http://localhost:3000/showtables").subscribe((data)=>{
+      this.elementdata=data
+      console.log(data)
+      this.datasource=data
+      console.log(this.datasource)
+    })
   }
   elementdata:any=[]
   a:any={productname:"productname"}
@@ -23,17 +34,12 @@ export class SelldialogueComponent {
       window.alert("Added")
     })
   }
-check(pid:any){
-  console.log(pid)
-  this.http.post("http://localhost:3000/check",{pid}).subscribe((res)=>{
-    console.log(res)
-    this.a=res
-  })
+check(pname:any){
+  console.log("came")
+  console.log(pname)
+  // this.http.post("http://localhost:3000/check",{pname}).subscribe((res)=>{
+  //   console.log(res)
+  //   this.a=res
+  // })
 }
-  dropdownload(){
-    this.http.get("http://localhost:3000/showtables").subscribe((data)=>{
-      this.elementdata=data
-      console.log(data)
-    })
-  }
 }

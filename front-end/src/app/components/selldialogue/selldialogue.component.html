@@ -1,11 +1,13 @@
 <form #f="ngForm">
     <label>Enter the product id:</label>
     <input name="pid" type="text" ngModel required #pid="ngModel"><br><br>
-    <label>Enter the product name:</label>
-    <input type="text" name="pname" (click)="check(pid.value)" value="{{a.productname}}" ngModel required #pname="ngModel"><br><br>
+    <label>Select the product name:</label>
+    <select >
+        <option>Select one</option>
+        <option *ngFor="let i of datasource" value="i.productname" >{{i.productname}}</option>
+    </select><br><br>
     <label>Selling Quantity(mention in kg)</label>
     <input name="kd" type="text" ngModel required #kg="ngModel"><br><br>
-    <label>Select one</label>
-    <button (click)="dropdownload()">test</button>
+    
     <button type="submit" (click)="sell(pid,kg)">Sell</button>
 </form>
