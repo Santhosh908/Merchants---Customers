@@ -1,17 +1,18 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, LOCALE_ID, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-selldialogue',
   templateUrl: './selldialogue.component.html',
   styleUrls: ['./selldialogue.component.css']
 })
-export class SelldialogueComponent implements OnInit {
+export class SelldialogueComponent {
 
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
   }
+  elementdata:any=[]
   a:any={productname:"productname"}
   sell(pid:any,kg:any){
     var pid=pid.value
@@ -28,4 +29,10 @@ check(pid:any){
     this.a=res
   })
 }
+  dropdownload(){
+    this.http.get("http://localhost:3000/showtables").subscribe((data)=>{
+      this.elementdata=data
+      console.log(data)
+    })
+  }
 }
