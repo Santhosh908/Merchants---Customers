@@ -1,0 +1,17 @@
+input{
+    margin: 1.5%;
+    font-size: large;
+}
+label{
+    margin: 1.5%;
+    font-size: large;
+}
+button{
+    font-size: large;
+    padding: 2%;
+    width: 20%;
+    margin-left: 40%;
+    background-color: rgb(87, 234, 109);
+    cursor: pointer;
+    border-color: transparent;
+}

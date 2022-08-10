@@ -12,7 +12,15 @@ export class SelldialogueComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  a:any
+  a:any={productname:"productname"}
+  sell(pid:any,kg:any){
+    var pid=pid.value
+    var kg=kg.value
+    var pname=this.a
+    this.http.post("http://localhost:3000/sellproduct",{pid,pname,kg}).subscribe((res)=>{
+      window.alert("Added")
+    })
+  }
 check(pid:any){
   console.log(pid)
   this.http.post("http://localhost:3000/check",{pid}).subscribe((res)=>{
