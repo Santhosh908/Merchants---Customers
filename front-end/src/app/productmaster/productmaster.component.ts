@@ -29,6 +29,7 @@ ngOnInit(): void {
       }
   })
 }
+
 }
 export const ELEMENT_DATA: any = [];
 

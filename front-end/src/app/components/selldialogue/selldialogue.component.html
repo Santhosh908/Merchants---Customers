@@ -4,7 +4,7 @@
     <label>Select the product name:</label>
     <select >
         <option>Select one</option>
-        <option *ngFor="let i of datasource" value="i.productname" >{{i.productname}}</option>
+        <option *ngFor="let i of datasource" value="i.productname" (change)="check(i.productname)">{{i.productname}}</option>
     </select><br><br>
     <label>Selling Quantity(mention in kg)</label>
     <input name="kd" type="text" ngModel required #kg="ngModel"><br><br>

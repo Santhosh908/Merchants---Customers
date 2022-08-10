@@ -35,6 +35,15 @@ export class SelldialogueComponent {
     })
   }
 check(pname:any){
+  switch(pname){
+    case 1:{
+      console.log(1)
+      break
+    }
+    default:
+      console.log(2)
+
+  }
   console.log("came")
   console.log(pname)
   // this.http.post("http://localhost:3000/check",{pname}).subscribe((res)=>{
