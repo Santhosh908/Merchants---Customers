@@ -31,7 +31,7 @@ export class SelldialogueComponent {
   sell(pid:any,pname:any,kg:any){
     var pid=pid.value
     var kg=kg.value
-    console.log(pid,pname.value,kg)
+    console.log(pname.value+pid)
     // this.http.post("http://localhost:3000/sellproduct",{pid,pname,kg}).subscribe((res)=>{
     //   window.alert("Added")
     // })
