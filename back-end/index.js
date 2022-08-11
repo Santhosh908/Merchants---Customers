@@ -77,10 +77,17 @@ app.post("/check",function(req,res){
     }
   })
 })
-// app.post("/sellproduct",function(req,res){
-//   var pid=req.body.pid
-//   var kg=req.body.kg
-// })
+app.post("/sellproduct",function(req,res){
+  var pid=req.body.pname
+  var kg=req.body.kg
+  var query=`SELECT productname FROM mercust.masterproduct where productid=${pid}`
+  database.query(query,function(err,data){
+    if(err)
+    throw err
+    else
+    console.log(data)
+  })
+})
 app.listen(PORT, function(){
   console.log("Server running on localhost:" + PORT);
 });

@@ -32,27 +32,14 @@ export class SelldialogueComponent {
     var pid=pid.value
     var kg=kg.value
     var pname=pname.value
-    console.log(f.value)
-    // this.http.post("http://localhost:3000/sellproduct",{pid,kg}).subscribe((res)=>{
-    //   window.alert("Added")
-    // })
+    console.log(pname+":"+kg)
+    this.http.post("http://localhost:3000/sellproduct",{pname,kg}).subscribe((res)=>{
+      window.alert("Added")
+    })
   }
   
-check(pname:any){
-  console.log(pname)
-  switch(pname){
-    case 1:{
-      console.log(1)
-      break
-    }
-    default:
-      console.log(2)
 
-  }
-}
 selectChangeHandler (event: any) {
-  //update the ui
-  console.log(event.target.value)
   this.selectedDay = event.target.value;
 }
   // this.http.post("http://localhost:3000/check",{pname}).subscribe((res)=>{
