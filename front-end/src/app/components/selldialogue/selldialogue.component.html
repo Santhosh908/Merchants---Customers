@@ -2,11 +2,11 @@
     <label>Enter the product id:</label>
     <input name="pid" type="text" ngModel required #pid="ngModel"><br><br>
     <label>Select the product name:</label>
-    <select  ngModel required #pname="ngModel" >
-        <option *ngFor="let i of datasource" value="i.productname" >{{i.productid+" "+i.productname}}</option>
+    <select   ng-change="myFunctionForDeterminingWhetherValueIsSelected()" ng-init="change()"   >
+        <option *ngFor="let i of datasource" value="i.productname" ng-change="change(value)">{{i.productid+" "+i.productname}}</option>
     </select><br><br>
     <label>Selling Quantity(mention in kg)</label>
     <input name="kd" type="text" ngModel required #kg="ngModel"><br><br>
     
-    <button type="submit" (click)="sell(pid,pname,kg)">Sell</button>
+    <button type="submit" (click)="sell(pid,kg)">Sell</button>
 </form>

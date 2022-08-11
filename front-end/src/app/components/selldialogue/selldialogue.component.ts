@@ -28,13 +28,15 @@ export class SelldialogueComponent {
   selectedName:String=""
   name:String=""
   a:any={productname:"productname"}
-  sell(pid:any,pname:any,kg:any){
+  sell(pid:any,kg:any){
     var pid=pid.value
     var kg=kg.value
-    console.log(pname.value+pid)
     // this.http.post("http://localhost:3000/sellproduct",{pid,pname,kg}).subscribe((res)=>{
     //   window.alert("Added")
     // })
+  }
+  change(){
+    console.log("here")
   }
 check(pname:any){
   console.log(pname)
