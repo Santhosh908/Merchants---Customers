@@ -9,6 +9,7 @@ import { Component} from '@angular/core';
 })
 export class SelldialogueComponent {
   datasource:any=[]
+  selectedDay: string = '';
   constructor(private http:HttpClient) { }
   public datafeilds:Object={text:'name',value:'Id'}
   public localData:Object[]=[
@@ -19,7 +20,6 @@ export class SelldialogueComponent {
   ngOnInit(): void {
     this.http.get("http://localhost:3000/showtables").subscribe((data)=>{
       this.elementdata=data
-      console.log(data)
       this.datasource=data
       console.log(this.datasource)
     })
@@ -28,16 +28,16 @@ export class SelldialogueComponent {
   selectedName:String=""
   name:String=""
   a:any={productname:"productname"}
-  sell(pid:any,kg:any){
+  sell(f:any,pid:any,pname:any,kg:any){
     var pid=pid.value
     var kg=kg.value
-    // this.http.post("http://localhost:3000/sellproduct",{pid,pname,kg}).subscribe((res)=>{
+    var pname=pname.value
+    console.log(f.value)
+    // this.http.post("http://localhost:3000/sellproduct",{pid,kg}).subscribe((res)=>{
     //   window.alert("Added")
     // })
   }
-  change(){
-    console.log("here")
-  }
+  
 check(pname:any){
   console.log(pname)
   switch(pname){
@@ -50,12 +50,11 @@ check(pname:any){
 
   }
 }
-  onSelectName(obj:any): void {
-    this.selectedName = obj.name;        
- 
-    this.name = obj.name;                
-    console.log(obj+"test");                 
-   }
+selectChangeHandler (event: any) {
+  //update the ui
+  console.log(event.target.value)
+  this.selectedDay = event.target.value;
+}
   // this.http.post("http://localhost:3000/check",{pname}).subscribe((res)=>{
   //   console.log(res)
   //   this.a=res

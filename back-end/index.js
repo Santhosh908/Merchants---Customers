@@ -77,33 +77,10 @@ app.post("/check",function(req,res){
     }
   })
 })
-app.post("/sellproduct",function(req,res){
-  var pid=req.body.pid
-  var pname=req.body.pname
-  var kg=req.body.kg
-  var query=`SELECT kg FROM mercust.sellproducts WHERE pid=${pid}`
-  database.query(query,function(err,data){
-    console.log(data+"data")
-    if(err){
-    throw err
-    }
-    else if(data==undefined){
-      var query=`INSERT INTO mercust.sellproducts VALUES(${pid},${pname},${kg})`
-  database.query(query,function(err,data){
-    if(err){
-      throw err
-    }
-    else{
-      res.send("Inserted")
-    }
-  })
-    }
-    else{
-      console.log(data.value)
-    }
-  })
-  
-})
+// app.post("/sellproduct",function(req,res){
+//   var pid=req.body.pid
+//   var kg=req.body.kg
+// })
 app.listen(PORT, function(){
   console.log("Server running on localhost:" + PORT);
 });

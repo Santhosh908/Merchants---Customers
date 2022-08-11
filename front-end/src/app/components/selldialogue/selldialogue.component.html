@@ -1,12 +1,15 @@
 <form #f="ngForm">
     <label>Enter the product id:</label>
-    <input name="pid" type="text" ngModel required #pid="ngModel"><br><br>
+    <input name="pid" type="text" value="{{selectedDay}}" ngModel required #pid="ngModel"><br><br>
     <label>Select the product name:</label>
-    <select   ng-change="myFunctionForDeterminingWhetherValueIsSelected()" ng-init="change()"   >
-        <option *ngFor="let i of datasource" value="i.productname" ng-change="change(value)">{{i.productid+" "+i.productname}}</option>
+    <select (change)="selectChangeHandler($event)" ngModel required #pname="ngModel" [ngModelOptions]="{standalone: true}">
+        <option *ngFor="let i of datasource" value="{{i.productid}}" >{{i.productname}}</option>
     </select><br><br>
     <label>Selling Quantity(mention in kg)</label>
     <input name="kd" type="text" ngModel required #kg="ngModel"><br><br>
     
-    <button type="submit" (click)="sell(pid,kg)">Sell</button>
+    <button type="submit" (click)="sell(f,pid,pname,kg)">Sell</button>
 </form>
+<!-- <select   ng-change="myFunctionForDeterminingWhetherValueIsSelected()" ng-init="change()"   >
+        <option *ngFor="let i of datasource" value="i.productname" (click)="change(i.productid)">{{i.productid+" "+i.productname}}</option>
+</select><br><br> -->
