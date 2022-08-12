@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component} from '@angular/core';
+import { Dialog } from '@angular/cdk/dialog';
 // import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
 
 @Component({
@@ -10,7 +11,7 @@ import { Component} from '@angular/core';
 export class SelldialogueComponent {
   datasource:any=[]
   selectedDay: string = '';
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private diaglog:Dialog) { }
   public datafeilds:Object={text:'name',value:'Id'}
   public localData:Object[]=[
     {
@@ -36,6 +37,7 @@ export class SelldialogueComponent {
     this.http.post("http://localhost:3000/sellproduct",{pname,kg}).subscribe((res)=>{
       window.alert("Added")
     })
+    // this.diaglog.closeAll()
   }
   
 

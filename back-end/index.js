@@ -77,6 +77,7 @@ app.post("/check",function(req,res){
     }
   })
 })
+var pname
 app.post("/sellproduct",function(req,res){
   var pid=req.body.pname
   var kg=req.body.kg
@@ -84,10 +85,22 @@ app.post("/sellproduct",function(req,res){
   database.query(query,function(err,data){
     if(err)
     throw err
-    else
-    console.log(data)
+    else{
+    console.log(data[0].productname)
+    setpname(data[0].productname,pid,kg)
+    }
   })
+  console.log(pname+"j")
+  
 })
+function setpname(x,pid,kg){
+  var pname=x
+  var query=`INSERT INTO mercust.sellproducts VALUES ("${pid}","${pname}","${kg}")`
+  database.query(query,function(err,data){
+    if(err)
+    throw err
+  })
+}
 app.listen(PORT, function(){
   console.log("Server running on localhost:" + PORT);
 });
