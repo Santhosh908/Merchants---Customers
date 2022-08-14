@@ -27,9 +27,6 @@ app.post('/singin',function(req,res){
 function setValue(value) {
     someVar = value;
   }
-  // app.get('/singin',function(req,res){
-  //   res.send(someVar[0].name)
-  // });
 app.post('/enroll', function(req, res) {
   var name=req.body.name
   var pass=req.body.pass
@@ -86,12 +83,9 @@ app.post("/sellproduct",function(req,res){
     if(err)
     throw err
     else{
-    console.log(data[0].productname)
     setpname(data[0].productname,pid,kg)
     }
-  })
-  console.log(pname+"j")
-  
+  })  
 })
 function setpname(x,pid,kg){
   var pname=x

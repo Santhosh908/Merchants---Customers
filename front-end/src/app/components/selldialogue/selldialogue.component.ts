@@ -37,7 +37,7 @@ export class SelldialogueComponent {
     this.http.post("http://localhost:3000/sellproduct",{pname,kg}).subscribe((res)=>{
       window.alert("Added")
     })
-    // this.diaglog.closeAll()
+    this.diaglog.closeAll()
   }
   
 
