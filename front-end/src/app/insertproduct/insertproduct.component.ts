@@ -17,7 +17,7 @@ export class InsertproductComponent implements OnInit {
   }
   ngOnInit(): void {
       this.http.get("http://localhost:3000/showsellproducts").subscribe((data)=>{
-        console.log(":")
+        console.log(data)
       })
       console.log("here")
   }

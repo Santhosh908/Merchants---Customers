@@ -97,18 +97,18 @@ function setpname(x,pid,kg){
 }
 var a=[]
 function setvalueforsellproduct(b){
-  this.a=b
+  a=b
 }
 app.get('/showsellproducts',function(req,res){
-  console.log("here")
   var query=`SELECT * FROM mercust.sellproducts`
-  database.query(query,function(err,data){
+  database.query(query,function(err,rows){
       if(err)
       throw err
       else{
-        setvalueforsellproduct(data)
+        setvalueforsellproduct(rows)
       }
   })
+  res.send(a)
 })
 app.listen(PORT, function(){
   console.log("Server running on localhost:" + PORT);
