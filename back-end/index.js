@@ -95,6 +95,21 @@ function setpname(x,pid,kg){
     throw err
   })
 }
+var a=[]
+function setvalueforsellproduct(b){
+  this.a=b
+}
+app.get('/showsellproducts',function(req,res){
+  console.log("here")
+  var query=`SELECT * FROM mercust.sellproducts`
+  database.query(query,function(err,data){
+      if(err)
+      throw err
+      else{
+        setvalueforsellproduct(data)
+      }
+  })
+})
 app.listen(PORT, function(){
   console.log("Server running on localhost:" + PORT);
 });
