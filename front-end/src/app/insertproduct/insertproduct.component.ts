@@ -11,16 +11,16 @@ import { SelldialogueComponent } from '../components/selldialogue/selldialogue.c
 })
 export class InsertproductComponent implements OnInit {
   a:any
-  constructor(private router:Router,private dialog:MatDialog,private http:HttpClient) { }
+  constructor(private router:Router,private dialog:MatDialog,private http:HttpClient) { 
+  }
   nav(){
     this.router.navigate(['addproduct'])
+    window.location.reload()
   }
   ngOnInit(): void {
       this.http.get("http://localhost:3000/showsellproducts").subscribe((data)=>{
         this.a=data
-        console.log(data)
       })
-      console.log("here")
   }
   opendia(){
     this.dialog.open(SelldialogueComponent);
