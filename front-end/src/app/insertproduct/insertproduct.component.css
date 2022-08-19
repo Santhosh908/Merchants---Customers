@@ -16,3 +16,15 @@ span{
     font-style: italic;
     text-decoration: underline;
 }
+h3{
+    font-family: sans-serif;
+    font-size: larger;
+}
+table{
+    font-family: sans-serif;
+    font-size: larger;
+
+}
+button{
+    border-color: transparent;
+}

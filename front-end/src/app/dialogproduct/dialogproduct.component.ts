@@ -19,8 +19,7 @@ export class DialogproductComponent  {
         console.log(res)
    }
   )
-  window.location.reload()
-  }
+}
   ngOnInit(): void {
   }
 
