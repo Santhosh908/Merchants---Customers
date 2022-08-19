@@ -3,7 +3,7 @@ const mqsql=require('mysql');
     host:"localhost",
     database:"mercust",
     user:"root",
-    password:"santhosh@2003"
+    password:"yourpassword"
  });
  connection.connect(function(error){
     if(error){
